@@ -85,7 +85,7 @@ def weight_files(
     """Get the local files"""
     # Local model
     if Path(model_id).exists() and Path(model_id).is_dir():
-        local_files = list(Path(model_id).glob(f"*{extension}"))
+        local_files = list(Path(model_id).glob(f"model*{extension}"))
         if not local_files:
             raise FileNotFoundError(
                 f"No local weights found in {model_id} with extension {extension}"
